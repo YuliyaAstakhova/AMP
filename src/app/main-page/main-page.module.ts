@@ -6,6 +6,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { HeaderModule } from '../header/header.module';
 import { BreadcrumbsModule } from '../breadcrumbs/breadcrumbs.module';
 import { FooterModule } from '../footer/footer.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ CourseComponent, CourseListComponent, MainPageComponent ],
@@ -14,6 +15,7 @@ import { FooterModule } from '../footer/footer.module';
     HeaderModule,
     BreadcrumbsModule,
     FooterModule,
+    FormsModule
   ],
   exports: [ MainPageComponent ],
 })

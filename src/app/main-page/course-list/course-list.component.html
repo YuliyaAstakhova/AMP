@@ -1,12 +1,19 @@
-<p>course-list works!</p>
-<ul>
-  <li>
-    <app-course></app-course>
-  </li>
-  <li>
-    <app-course></app-course>
-  </li>
-  <li>
-    <app-course></app-course>
-  </li>
-</ul>
+<div class="course-list">
+  <div class="course-list__search">
+    <input
+      class="course-list__search-input"
+      placeholder="Text to search"
+      [(ngModel)]="query" />
+    <button (click)="find()" class="course-list__search-button">SEARCH</button>
+  </div>
+
+  <div class="course-list__add-wrapper">
+    <button class="course-list__add" (click)="add()">Add course</button>
+  </div>
+
+  <ul class="course-list__content">
+    <li *ngFor="let course of courses">
+      <app-course [course]="course"></app-course>
+    </li>
+  </ul>
+</div>
