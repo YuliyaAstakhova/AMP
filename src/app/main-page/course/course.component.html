@@ -10,7 +10,7 @@
     <div class="course__description">{{course.description}}</div>
   </div>
   <div class="course__actions">
-    <button>Edit</button>
-    <button>Delete</button>
+    <button class="course__actions-btn">Edit</button>
+    <button (click)="onDelete()" class="course__actions-btn">Delete</button>
   </div>
 </div>

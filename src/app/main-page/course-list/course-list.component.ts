@@ -16,7 +16,14 @@ export class CourseListComponent implements OnInit {
       title: 'title1',
       creationDate: new Date(),
       duration: 1,
-      description: 'description1',
+      description: `description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1
+      description1 fjgskfjls description1 krjglkrjg;krjg; description1 krjgkdescription1`,
     },
     {
       id: 'id2',
@@ -48,5 +55,13 @@ export class CourseListComponent implements OnInit {
 
   public add():void {
     console.log('add');
+  }
+
+  public onCourseDelete(course: CourseInterface): void {
+    console.log('delete course', course);
+  }
+
+  public loadMore(): void {
+    console.log('load more clicked!');
   }
 }
