@@ -1,14 +1,14 @@
 <div class="course-list">
   <div class="course-list__search">
-    <input
-      class="course-list__search-input"
-      placeholder="Text to search"
-      [(ngModel)]="query" />
-    <button (click)="find()" class="course-list__search-button">SEARCH</button>
+    <app-search></app-search>
   </div>
 
   <div class="course-list__add-wrapper">
-    <button class="course-list__add" (click)="add()">Add course</button>
+    <app-button
+      (click)="add()"
+      type="default"
+      size="medium"
+      title="Add course"></app-button>
   </div>
 
   <ul class="course-list__content">

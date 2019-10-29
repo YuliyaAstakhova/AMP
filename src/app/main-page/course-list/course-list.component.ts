@@ -9,7 +9,6 @@ import CourseInterface from '../../core/course/courseInterface';
   styleUrls: ['./course-list.component.less']
 })
 export class CourseListComponent implements OnInit {
-  public query = 'test';
   public courses: CourseInterface[] = [
     {
       id: 'id1',
@@ -47,10 +46,6 @@ export class CourseListComponent implements OnInit {
 
   public setQuery(e):void {
     console.log('setQuery:', e);
-  }
-
-  public find():void {
-    console.log('query:', this.query);
   }
 
   public add():void {

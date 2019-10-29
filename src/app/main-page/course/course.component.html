@@ -10,7 +10,16 @@
     <div class="course__description">{{course.description}}</div>
   </div>
   <div class="course__actions">
-    <button class="course__actions-btn">Edit</button>
-    <button (click)="onDelete()" class="course__actions-btn">Delete</button>
+    <!-- <button class="course__actions-btn">Edit</button> -->
+    <app-button
+      customClass="course__actions-btn"
+      title="edit"
+      type="default"
+      size="small"></app-button>
+    <app-button
+      title="delete"
+      type="default"
+      size="small"
+      (click)="delete()"></app-button>
   </div>
 </div>

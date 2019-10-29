@@ -8,10 +8,10 @@ import CourseInterface from '../../core/course/courseInterface';
 })
 export class CourseComponent implements OnInit {
   @Input() public course: CourseInterface;
-  @Output('onCourseDelete') onCourseDeleteEvent = new EventEmitter<CourseInterface>();
+  @Output() onCourseDelete = new EventEmitter<CourseInterface>();
 
-  public onDelete(): void {
-      this.onCourseDeleteEvent.emit(this.course);
+  public delete(): void {
+      this.onCourseDelete.emit(this.course);
   }
 
   constructor() { }
