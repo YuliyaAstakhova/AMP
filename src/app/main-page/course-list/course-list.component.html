@@ -1,12 +1,22 @@
-<p>course-list works!</p>
-<ul>
-  <li>
-    <app-course></app-course>
-  </li>
-  <li>
-    <app-course></app-course>
-  </li>
-  <li>
-    <app-course></app-course>
-  </li>
-</ul>
+<div class="course-list">
+  <div class="course-list__search">
+    <app-search></app-search>
+  </div>
+
+  <div class="course-list__add-wrapper">
+    <app-button
+      (click)="add()"
+      type="default"
+      size="medium"
+      title="Add course"></app-button>
+  </div>
+
+  <ul class="course-list__content">
+    <li *ngFor="let course of courses">
+      <app-course [course]="course" (onCourseDelete)="onCourseDelete($event)"></app-course>
+    </li>
+  </ul>
+  <div class="course-list__load-more">
+    <a class="course-list__load-more-button" (click)="loadMore()">Load more</a>
+  </div>
+</div>
