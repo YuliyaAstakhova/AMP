@@ -1,16 +1,15 @@
-<div class="course">
+<div class="course" [appTermIndicator]="course.creationDate" [ngClass]="{'course--top': course.topRated}">
   <div class="course__content">
     <div class="course__header">
-      <div class="course__title">{{course.title}}</div>
+      <div class="course__title">{{course.title | uppercase}}</div>
       <div class="course__details">
-        <div class="course__duration">{{course.duration}}</div>
-        <div class="course__date">{{course.creationDate}}</div>
+        <div class="course__duration">{{course.duration | duration }}</div>
+        <div class="course__date">{{course.creationDate | date }}</div>
       </div>
     </div>
     <div class="course__description">{{course.description}}</div>
   </div>
   <div class="course__actions">
-    <!-- <button class="course__actions-btn">Edit</button> -->
     <app-button
       customClass="course__actions-btn"
       title="edit"

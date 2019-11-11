@@ -12,9 +12,7 @@ export class MainPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const testCourse = new Course('course title', 1, 'course description');
+    const testCourse = new Course('course title', 1, 'course description', true);
     const testUser = new User('firstName', 'lastName');
-    console.log('testCourse', testCourse);
-    console.log('testUser', testUser);
   }
 }
