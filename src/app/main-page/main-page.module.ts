@@ -10,9 +10,22 @@ import { FooterModule } from '../footer/footer.module';
 import { ContainerModule } from '../container/container.module';
 import { ButtonModule } from 'app/ui/button/button.module';
 import { SearchComponent } from './course-list/search/search.component';
+import { TermIndicatorDirective } from './course/term-indicator/term-indicator.directive';
+import { FilterCourcesPipe } from './course-list/filter-cources/filter-cources.pipe';
+import { DurationPipe } from './course/duration/duration.pipe';
+import { OrderPipe } from './course-list/order/order.pipe'
 
 @NgModule({
-  declarations: [ CourseComponent, CourseListComponent, MainPageComponent, SearchComponent ],
+  declarations: [
+    CourseComponent,
+    CourseListComponent,
+    MainPageComponent,
+    SearchComponent,
+    TermIndicatorDirective,
+    FilterCourcesPipe,
+    DurationPipe,
+    OrderPipe
+  ],
   imports: [
     CommonModule,
     BreadcrumbsModule,

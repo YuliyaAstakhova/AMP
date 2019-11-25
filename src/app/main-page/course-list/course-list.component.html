@@ -1,6 +1,6 @@
 <div class="course-list">
   <div class="course-list__search">
-    <app-search></app-search>
+    <app-search (setQuery)="setQuery($event)"></app-search>
   </div>
 
   <div class="course-list__add-wrapper">
@@ -11,11 +11,12 @@
       title="Add course"></app-button>
   </div>
 
-  <ul class="course-list__content">
-    <li *ngFor="let course of courses">
+  <ul class="course-list__content" *ngIf="courses.length">
+    <li *ngFor="let course of courses | filterCources : searchQuery | order:'creationDate'">
       <app-course [course]="course" (onCourseDelete)="onCourseDelete($event)"></app-course>
     </li>
   </ul>
+  <div *ngIf="!courses.length" class="course-list__no-data">No data. Feel free to add new course</div>
   <div class="course-list__load-more">
     <a class="course-list__load-more-button" (click)="loadMore()">Load more</a>
   </div>

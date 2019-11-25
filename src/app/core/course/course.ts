@@ -6,10 +6,12 @@ export default class Course implements CourseInterface {
   title;
   duration;
   description;
+  topRated;
 
-  constructor(title: string, duration: number, description: string) {
+  constructor(title: string, duration: number, description: string, topRated: boolean) {
     this.title = title;
     this.duration = duration;
     this.description = description;
+    this.topRated = topRated;
   }
 }
