@@ -7,12 +7,15 @@
   border-radius: 3px;
   border: none;
 
-  &--type-default {
-    background-color: @color-dark-sky-blue;
-
+  &--disabled {
+    background-color: @color-gray;
   }
 
-  &--type-healthy {
+  &--type-default:not(.button--disabled) {
+    background-color: @color-dark-sky-blue;
+  }
+
+  &--type-healthy:not(.button--disabled) {
     background-color: @color-sick-green;
   }
 
