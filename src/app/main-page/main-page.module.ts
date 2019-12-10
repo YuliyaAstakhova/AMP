@@ -13,7 +13,8 @@ import { SearchComponent } from './course-list/search/search.component';
 import { TermIndicatorDirective } from './course/term-indicator/term-indicator.directive';
 import { FilterCourcesPipe } from './course-list/filter-cources/filter-cources.pipe';
 import { DurationPipe } from './course/duration/duration.pipe';
-import { OrderPipe } from './course-list/order/order.pipe'
+import { OrderPipe } from './course-list/order/order.pipe';
+import { LoginFormComponent } from './login-form/login-form/login-form.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { OrderPipe } from './course-list/order/order.pipe'
     TermIndicatorDirective,
     FilterCourcesPipe,
     DurationPipe,
-    OrderPipe
+    OrderPipe,
+    LoginFormComponent
   ],
   imports: [
     CommonModule,

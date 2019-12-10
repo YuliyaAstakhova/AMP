@@ -1,0 +1,33 @@
+<div class="login-form">
+  <h1>Login</h1>
+  <div>
+    <div class="login-form__label">
+      <label for="email">email</label>
+      <span>*required</span>
+    </div>
+    <input
+      type="text"
+      id="email" [(ngModel)]="user.login"
+      class="login-form__input"
+      placeholder="Enter email">
+  </div>
+  <div>
+    <div class="login-form__label">
+      <label for="password">password</label>
+      <span>*required</span>
+    </div>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="user.password"
+      class="login-form__input"
+      placeholder="Enter password">
+  </div>
+  <app-button
+    class="login-form__button"
+    title="Login"
+    type="healthy"
+    size="medium"
+    [disabled]="!user.login || !user.password"
+    (callback)="loginClick()"></app-button>
+</div>
