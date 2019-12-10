@@ -10,6 +10,7 @@ export class ButtonComponent implements OnInit {
   @Input() public type: string;
   @Input() public size: string;
   @Input() public customClass: string;
+  @Input() public disabled: boolean;
 
   @Output() callback = new EventEmitter<any>();
 
@@ -21,8 +22,9 @@ export class ButtonComponent implements OnInit {
     const baseClass = 'button';
     const typeModifier = this.type ? `${baseClass}--type-${this.type}` : `${baseClass}--type-default`;
     const sizeModifier = this.size ? `${baseClass}--size-${this.size}` : `${baseClass}--size-medium`;
+    const disabledModifier = this.disabled ? `${baseClass}--disabled`: null;
 
-    return [ baseClass, typeModifier, sizeModifier, this.customClass ].join(' ');
+    return [ baseClass, typeModifier, sizeModifier, this.customClass, disabledModifier ].join(' ');
   }
 
   constructor() { }
